@@ -10,9 +10,12 @@
 <body <?php body_class(); ?>>
     <header class="site-header">
         <div class="header-container">
-            <div class="site-logo">Grounded Dating</div>
-            <nav class="header-nav">
-                <a href="<?php echo home_url('/join'); ?>" class="join-btn">Join</a>
-            </nav>
+          <div class="site-logo">
+    <a href="<?php echo home_url('/'); ?>">Grounded Dating</a>
+</div>
+
+<nav class="header-nav">
+    <a href="<?php echo home_url('/join'); ?>" class="join-btn">Join</a>
+</nav>
         </div>
     </header>

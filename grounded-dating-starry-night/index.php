@@ -1,21 +1,11 @@
 <?php
 /**
- * The main template file for the Starry Night homepage.
- *
- * This file can be copied to front-page.php if you only want the homepage
- * to use the animation and keep other templates for the rest of the site.
- */
-?>
-<?php
-/**
- * The main template file for the Starry Night homepage.
- *
- * Uses header.php and footer.php for standard markup.
+ * Main Template - Starry Night Theme
  */
 get_header();
 ?>
 
-    <canvas id="canvas-stars"></canvas>
+<canvas id="canvas-stars"></canvas>
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -178,6 +168,8 @@ get_header();
             </article>
         </div>
     </section>
+
+    <script>
         const canvas = document.getElementById('canvas-stars');
         const ctx = canvas.getContext('2d');
         let width, height, stars = [];
@@ -186,7 +178,6 @@ get_header();
             width = canvas.width = window.innerWidth;
             height = canvas.height = window.innerHeight;
             stars = [];
-            // Create 400 stars for a dense starry effect
             for (let i = 0; i < 400; i++) {
                 stars.push({
                     x: Math.random() * width,
