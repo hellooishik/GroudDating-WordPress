@@ -1,6 +1,8 @@
 <?php
 /**
- * Join Form Page Template
+ * Template Name: Join Form
+ * Description: Custom join form page with starry night theme
+ * Template Post Type: page
  */
 get_header();
 ?>
