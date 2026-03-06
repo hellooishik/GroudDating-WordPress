@@ -57,7 +57,7 @@
 
             <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <p>&copy; 2023 Grounded Dating | Made with love by SuperbThemes</p>
+                <p>&copy; 2023 Grounded Dating | Made with love by Xnetwork</p>
             </div>
         </div>
     </footer>

@@ -12,7 +12,7 @@
         <div class="header-container">
             <div class="site-logo">Grounded Dating</div>
             <nav class="header-nav">
-                <a href="#" class="join-btn">Join</a>
+                <a href="<?php echo home_url('/join'); ?>" class="join-btn">Join</a>
             </nav>
         </div>
     </header>
