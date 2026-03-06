@@ -11,8 +11,59 @@ body, html {
     padding: 0;
     width: 100%;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #0a0a0c; /* Deep space dark background */
+    background-color: #0a0a0c;
     color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styling */
+.site-header {
+    position: relative;
+    z-index: 10;
+    background: transparent;
+    padding: 20px 40px;
+    border-bottom: 1px solid rgba(75, 85, 99, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.site-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3b82f6;
+}
+
+.header-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.join-btn {
+    background-color: #007520;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.join-btn:hover {
+    background-color: #009028;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 117, 32, 0.4);
 }
 
 /* Canvas for the starry background */
@@ -36,6 +87,7 @@ body, html {
     height: 100vh;
     text-align: center;
     padding: 20px;
+    flex-grow: 1;
 }
 
 /* CSS recreation of the globe/heart logo */
@@ -365,6 +417,196 @@ p {
     margin: 0;
 }
 
+/* Footer Styling */
+.site-footer {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(180deg, rgba(10,10,12,0.98) 0%, rgba(10,10,12,1) 100%);
+    border-top: 1px solid rgba(75, 85, 99, 0.2);
+    padding: 80px 20px 40px;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-label {
+    color: #007520;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.footer-header h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin: 10px 0 0 0;
+    animation: fadeIn 1s ease-out;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer-column {
+    animation: slideUp 0.8s ease-out;
+}
+
+.footer-column h3 {
+    color: white;
+    font-size: 1.2rem;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+}
+
+.footer-column p {
+    color: #9ca3af;
+    margin: 0 0 15px 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footer-column ul li a:hover {
+    color: #3b82f6;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(75, 85, 99, 0.3);
+    border: 1px solid rgba(75, 85, 99, 0.4);
+    border-radius: 50%;
+    color: #3b82f6;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.social-icon:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: #3b82f6;
+    transform: translateY(-3px);
+}
+
+.social-icon.twitter {
+    color: #1DA1F2;
+}
+
+.social-icon.twitter:hover {
+    background: rgba(29, 161, 242, 0.2);
+    border-color: #1DA1F2;
+}
+
+.social-icon.linkedin {
+    color: #0A66C2;
+}
+
+.social-icon.linkedin:hover {
+    background: rgba(10, 102, 194, 0.2);
+    border-color: #0A66C2;
+}
+
+.social-icon.instagram {
+    color: #E1306C;
+}
+
+.social-icon.instagram:hover {
+    background: rgba(225, 48, 108, 0.2);
+    border-color: #E1306C;
+}
+
+/* Search Form */
+.search-form {
+    display: flex;
+    gap: 0;
+    margin-top: 15px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid rgba(75, 85, 99, 0.4);
+    border-radius: 5px 0 0 5px;
+    background: rgba(31, 41, 55, 0.6);
+    color: white;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: #9ca3af;
+}
+
+.search-input:focus {
+    border-color: #3b82f6;
+}
+
+.search-btn {
+    padding: 12px 24px;
+    background-color: #007520;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    background-color: #009028;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(75, 85, 99, 0.2);
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
 /* Animations */
 @keyframes slideUp {
     from {
@@ -453,5 +695,38 @@ p {
     .image-placeholder {
         width: 100%;
         height: 250px;
+    }
+
+    .site-header {
+        padding: 15px 20px;
+    }
+
+    .header-container {
+        flex-wrap: wrap;
+    }
+
+    .site-logo {
+        font-size: 1.2rem;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-input {
+        border-radius: 5px;
+    }
+
+    .search-btn {
+        border-radius: 5px;
+    }
+
+    .footer-header h2 {
+        font-size: 1.8rem;
     }
 }

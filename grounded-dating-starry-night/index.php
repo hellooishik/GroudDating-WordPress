@@ -108,14 +108,6 @@ get_header();
         </div>
     </section>
 
-    <!-- Articles Section -->
-    <section class="articles-section">
-        <h2>Popular Articles</h2>
-        <div class="articles-placeholder">
-            <p>Featured articles coming soon...</p>
-        </div>
-    </section>
-
     <script>
         const canvas = document.getElementById('canvas-stars');
         const ctx = canvas.getContext('2d');
